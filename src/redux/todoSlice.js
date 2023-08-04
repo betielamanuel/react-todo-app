@@ -1,23 +1,28 @@
-// src/redux/todoSlice.js
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-todos: [],
+    todos: JSON.parse(localStorage.getItem('todos')) || [],
 };
 
 const todoSlice = createSlice({
 name: 'todos',
 initialState,
 reducers: {
-    addTodo: (state, action) => {
-    state.todos.push(action.payload);
+        addTodo: (state, action) => {
+            state.todos.push(action.payload);
+            localStorage.setItem('todos', JSON.stringify(state.todos));
+            },
+        removeTodo: (state, action) => {
+            state.todos = state.todos.filter(todo => todo.id !== action.payload);
+            localStorage.setItem('todos', JSON.stringify(state.todos));
+        },
+        setWeatherData: (state, action) => {
+            state.weatherData = action.payload;
+        },
     },
-    removeTodo: (state, action) => {
-    state.todos = state.todos.filter(todo => todo.id !== action.payload);
-    },
-    // Add more reducers here for updating, marking as completed, etc.
-},
 });
 
-export const { addTodo, removeTodo } = todoSlice.actions;
+export const { addTodo, removeTodo, setWeatherData } = todoSlice.actions;
 export default todoSlice.reducer;
+
