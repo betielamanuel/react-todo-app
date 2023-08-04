@@ -3,27 +3,26 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background-image: url("https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80");
-    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1585030635220-b9fe210a80d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80");
+    background-size: auto;
 }
 
 
 .container {
-max-width: 400px;
-margin: 0 auto; 
-padding: 20px;
-background-color: #cfaeae;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-border-radius: 10px;
-
+    max-width: 400px;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #a57258;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 
 .center-container {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
 }
 
 
@@ -40,10 +39,11 @@ form {
 input[type='text'] {
     flex: 1;
     padding: 5px;
+    border-radius:10px ;
 }
 
 button {
-    background-color: #a200ff;
+    background-color: #80668e;
     color: #fff;
     padding: 5px 10px;
     border: none;
@@ -56,5 +56,5 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #ff7b00;
 }
